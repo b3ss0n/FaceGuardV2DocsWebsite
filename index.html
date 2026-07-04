@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceGuardV2 — Project Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #f6f8fa;
+            --text-color: #24292f;
+            --accent-color: #0969da;
+            --border-color: #d0d7de;
+            --card-bg: #ffffff;
+            --text-muted: #57606a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; }
+        
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        
+        header h1 { font-size: 2.5rem; font-weight: 700; color: #1f2328; }
+        header p { color: var(--text-muted); margin-top: 5px; font-size: 1.1rem; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .card h2 { font-size: 1.3rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        .card > p { margin-bottom: 15px; font-size: 0.95rem; color: var(--text-muted); }
+        
+        .doc-list { list-style: none; }
+        .doc-list li { margin-bottom: 12px; }
+        .doc-list a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .doc-list a:hover { text-decoration: underline; }
+        .doc-list .desc { font-size: 0.85rem; color: var(--text-muted); display: block; margin-top: 2px; }
+
+        .adr-list {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+            gap: 12px;
+        }
+
+        .architecture-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 24px;
+        }
+        
+        .architecture-section h2 { margin-bottom: 20px; }
+
+        .diagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .diagram-item {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px;
+            background: #f8f9fa;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .diagram-item h4 { margin-bottom: 10px; font-size: 0.95rem; color: #24292f; }
+        
+        .diagram-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #e1e4e8;
+            background: white;
+            margin-top: auto;
+        }
+
+        footer { text-align: center; margin-top: 60px; color: var(--text-muted); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🛡️ FaceGuardV2</h1>
+        <p>Access Control and Monitoring System | Documentation Dashboard</p>
+    </header>
+
+    <main>
+        <div class="grid">
+            <div class="card">
+                <h2>📋 Requirements and Analysis</h2>
+                <ul class="doc-list">
+                    <li><a href="Process_Requirements.html" target="_blank" rel="noopener noreferrer">Business Processes and System Requirements</a><span class="desc">Process_Requirements.md</span></li>
+                    <li><a href="quality-requirements.html" target="_blank" rel="noopener noreferrer">Quality Requirements (NFRs)</a><span class="desc">quality-requirements.md</span></li>
+                    <li><a href="interface.html" target="_blank" rel="noopener noreferrer">Interface Specification</a><span class="desc">interface.md</span></li>
+                    <li><a href="user-stories.html" target="_blank" rel="noopener noreferrer">User Stories</a><span class="desc">user-stories.md</span></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>⚙️ Process Management</h2>
+                <ul class="doc-list">
+                    <li><a href="development-process.html" target="_blank" rel="noopener noreferrer">Development Process Workflow</a><span class="desc">development-process.md</span></li>
+                    <li><a href="definition-of-done.html" target="_blank" rel="noopener noreferrer">Definition of Done (DoD)</a><span class="desc">definition-of-done.md</span></li>
+                    <li><a href="roadmap.html" target="_blank" rel="noopener noreferrer">Project Roadmap</a><span class="desc">roadmap.md</span></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>🧪 Testing and Quality</h2>
+                <ul class="doc-list">
+                    <li><a href="testing.html" target="_blank" rel="noopener noreferrer">General Testing Strategy</a><span class="desc">testing.md</span></li>
+                    <li><a href="quality-requirement-tests.html" target="_blank" rel="noopener noreferrer">Quality Requirement Tests</a><span class="desc">quality-requirement-tests.md</span></li>
+                    <li><a href="user-acceptance-tests.html" target="_blank" rel="noopener noreferrer">User Acceptance Tests (UAT)</a><span class="desc">user-acceptance-tests.md</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🏛️ Architectural Decision Records (ADR)</h2>
+            <p>Adopted architectural decisions and their rationale:</p>
+            <ul class="doc-list adr-list">
+                <li><a href="architecture/adr/ADR-001-separate-backend-and-ml-service.html" target="_blank" rel="noopener noreferrer">ADR-001: Separation of Backend and ML Service</a></li>
+                <li><a href="architecture/adr/ADR-002-use-sqlite-through-face-database.html" target="_blank" rel="noopener noreferrer">ADR-002: Using SQLite through Face Database</a></li>
+                <li><a href="architecture/adr/ADR-003-session-auth-and-password-hashing.html" target="_blank" rel="noopener noreferrer">ADR-003: Session Authentication and Password Hashing</a></li>
+                <li><a href="architecture/adr/ADR-004-servo-abstraction-with-emulated-mode.html" target="_blank" rel="noopener noreferrer">ADR-004: Servo Abstraction and Emulation Mode</a></li>
+            </ul>
+        </div>
+
+        <div class="architecture-section">
+            <h2>📊 Architecture Diagrams</h2>
+            <div class="diagram-grid">
+                
+                <div class="diagram-item">
+                    <h4>Component Diagram (Static View)</h4>
+                    <a href="architecture/static-view/component-diagram.png" target="_blank" rel="noopener noreferrer">
+                        <img src="architecture/static-view/component-diagram.png" alt="FaceGuardV2 System Component Diagram">
+                    </a>
+                </div>
+
+                <div class="diagram-item">
+                    <h4>User Registration (Sequence Diagram)</h4>
+                    <a href="architecture/dynamic-view/register-new-person-sequence.png" target="_blank" rel="noopener noreferrer">
+                        <img src="architecture/dynamic-view/register-new-person-sequence.png" alt="Registration Sequence Diagram">
+                    </a>
+                </div>
+
+                <div class="diagram-item">
+                    <h4>Deployment Diagram</h4>
+                    <a href="architecture/deployment-view/deployment-diagram.png" target="_blank" rel="noopener noreferrer">
+                        <img src="architecture/deployment-view/deployment-diagram.png" alt="System Deployment Diagram">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 FaceGuardV2. Designed in accordance with quality standards.</p>
+    </footer>
+</div>
+
+</body>
+</html>
